@@ -2153,7 +2153,7 @@ for (let i = 0; i < numberOfBlobs; i++) {
 当你玩儿宝藏猎人的时候，你会发现当猎人碰到其中一个敌人时，场景右上角的血条宽度会减少。这个血条是如何被制作的？他就是两个相同的位置的重叠的矩形：一个黑色的矩形在下面，红色的上面。他们被分组到了一个单独的 `healthBar` 分组。 `healthBar` 然后被添加到 `gameScene` 并在舞台上被定位。
 ```js
 //Create the health bar
-healthBar = new PIXI.DisplayObjectContainer();
+healthBar = new PIXI.Container();
 healthBar.position.set(stage.width - 170, 4)
 gameScene.addChild(healthBar);
 
